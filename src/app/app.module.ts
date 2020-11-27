@@ -21,6 +21,7 @@ import { UsersAddComponent } from './pages/users/users-add/users-add.component';
 import { UsersDelComponent } from './pages/users/users-del/users-del.component';
 import { UsersEditComponent } from './pages/users/users-edit/users-edit.component';
 import { HeaderComponent } from './pages/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { HeaderComponent } from './pages/header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

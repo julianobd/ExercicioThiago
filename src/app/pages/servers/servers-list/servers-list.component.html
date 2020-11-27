@@ -1,1 +1,51 @@
-<p>servers-list works!</p>
+<div class="container">
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <strong> SERVIDORES </strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="add">
+        <button type="button" class="btn btn-success" style="width: 100px;">+ Servidor</button>
+    </div>
+
+    <table class="table table-hover" *ngIf="responseServers">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">ID</th>
+            <th scope="col">Dinheiro</th>
+            <th scope="col">Pontos Iniciais</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Deletar</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let server of responseServers">
+            <td>{{server.name}}</td>
+            <td>{{server.id}}</td>
+            <td>{{server.initialMoney}}</td>
+            <td>{{server.initialStatsPoints}}</td>
+            <td class="action">
+                <button type="button" class="btn btn-outline-warning">Servidor</button>
+                <button type="button" class="btn btn-outline-success">Itens</button>
+                <button type="button" class="btn btn-outline-primary">Tabela</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline-danger">Deletar</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+</div>
+
+
+
+
+

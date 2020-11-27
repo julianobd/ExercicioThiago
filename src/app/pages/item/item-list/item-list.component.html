@@ -1,1 +1,54 @@
-<p>item-list works!</p>
+<div class="container">
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <strong> ITENS </strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="add">
+      <button type="button" class="btn btn-success" style="width: 100px;">+ Item</button>
+    </div>
+
+    <table class="table table-hover" *ngIf="responseItem">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Imagem</th>
+            <th scope="col">Saúde</th>
+            <th scope="col">Armadura</th>
+            <th scope="col">Experiência</th>
+            <th scope="col">Fome</th>
+            <th scope="col">Dinheiro</th>
+            <th scope="col">Status</th>
+            <th scope="col">Inicial</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of responseItem">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.imageId}}</td>
+            <td>{{item.health}}</td>
+            <td>{{item.vest}}</td>
+            <td>{{item.experience}}</td>
+            <td>{{item.hungry}}</td>
+            <td>{{item.money}}</td>
+            <td>{{item.statusPoint}}</td>
+            <td>{{item.quantityInitial}}</td>
+            <td class="action">
+                <button type="button" class="btn btn-outline-warning">Editar</button>
+                <button type="button" class="btn btn-outline-danger">Deletar</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+</div>
+
+
