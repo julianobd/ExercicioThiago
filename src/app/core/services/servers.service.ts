@@ -16,7 +16,7 @@ export class ServersService {
     ) { }
 
    getServerList(){
-     return this.http.get(environment.baseURL + 'Servers/ListServers/' + `${this.userToken}`);
+     return this.http.get(environment.baseURL + environment.getServersList + `${this.userToken}`);
    }
 
 }

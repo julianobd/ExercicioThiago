@@ -1,1 +1,89 @@
-<p>machines-edit works!</p>
+<div class="container">
+
+    <br>
+
+    <div class="card title">
+        <div class="card-body">
+          <strong> Editar - Maquinas de Experiência </strong>
+        </div>
+    </div>
+
+    <div class="card editCard">
+
+    <div class="d-flex justify-content-between" >
+
+      <form style="width: 100rem; height: 24rem;">
+
+        <div class="form-row">
+
+         <div class="col-md-4 mb-2">
+            <label for="validationDefault01">Descrição</label>
+            <input type="text" class="form-control" 
+                id="validationDefault01" placeholder="" 
+                required  name="description">
+         </div>
+
+         <div class="col-md-4 mb-2">
+            <label for="validationDefault01">Experiência por Minuto</label>
+            <input type="number" class="form-control" 
+             id="validationDefault01" placeholder="0" 
+             required  name="expEachMinute">
+          </div>
+
+          <div class="col-md-4 mb-2">
+            <label for="validationDefault01">Inicio Automatico</label>
+            <select type="text" class="form-control" 
+             id="validationDefault01"required  name="automaticStart">
+              <option value="">...</option>
+              <option value="true">Sim</option>
+              <option value="False">Não</option>
+            </select> 
+          </div>
+
+        </div>
+        
+        <div class="form-row">
+
+          <div class="col-md-4 mb-2">
+             <label for="validationDefault01">Hora de Inicio</label>
+             <input type="text" class="form-control" 
+                 id="validationDefault01" placeholder="" 
+                 required  name="hourStart">
+          </div>
+ 
+          <div class="col-md-4 mb-2">
+             <label for="validationDefault01">Hora de Fim</label>
+             <input type="text" class="form-control" 
+              id="validationDefault01" placeholder="" 
+              required  name="hourEnds">
+           </div>
+ 
+           <div class="col-md-4 mb-2">
+             <label for="validationDefault01">Habilitar</label>
+             <select type="text" class="form-control" 
+              id="validationDefault01"required  name="enable">
+               <option value="">...</option>
+               <option value="true">Sim</option>
+               <option value="False">Não</option>
+             </select> 
+           </div>
+ 
+         </div>
+
+         <br>
+          
+          <button type="button" class="btn btn-outline-success">Atualizar</button>
+          
+        </form>
+        
+        </div>
+
+      </div>
+
+</div>
+
+
+
+
+
+

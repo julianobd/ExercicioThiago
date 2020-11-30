@@ -1,1 +1,81 @@
-<p>users-edit works!</p>
+<div class="container">
+
+    <br>
+
+    <div class="card title">
+        <div class="card-body">
+          <strong> Editar - Usuários </strong>
+        </div>
+    </div>
+
+    <div class="card editCard">
+
+    <div class="d-flex justify-content-between" >
+
+      <form style="width: 100rem; height: 24rem;">
+
+        <div class="form-row">
+
+         <div class="col-md-6 mb-4">
+            <label for="validationDefault01">Nome</label>
+            <input type="text" class="form-control" 
+                id="validationDefault01" placeholder="0" 
+                required  name="nome">
+         </div>
+
+         <div class="col-md-6 mb-4">
+            <label for="validationDefault01">Email</label>
+            <input type="text" class="form-control" 
+             id="validationDefault01" placeholder="0" 
+             required  name="email">
+          </div>
+
+        </div>
+        
+        <div class="form-row">
+
+            <div class="col-md-6 mb-4">
+                <label for="validationDefault01">Senha</label>
+                <input type="text" class="form-control" 
+                    id="validationDefault01" placeholder="0" 
+                    required  name="password">
+             </div>
+  
+            <div class="col-md-6 mb-4">
+              <label for="validationDefault01">Permissão</label>
+              <select type="number" class="form-control" 
+               id="validationDefault01"required  name="leader">
+                <option value="">...</option>
+                <option value="true">Administrador</option>
+                <option value="False">Restrito</option>
+              </select> 
+            </div>
+  
+          </div>
+        
+          <div class="form-row">
+
+            <div class="col-md-6 mb-4">
+                <label for="validationDefault01">ID Servidor</label>
+                <input type="text" class="form-control" 
+                    id="validationDefault01" placeholder="0" 
+                    required  name="serverId">
+             </div>
+   
+          </div>
+                     
+          <button type="button" class="btn btn-outline-success">Atualizar</button>
+          
+        </form>
+        
+        </div>
+
+      </div>
+
+</div>
+
+
+
+
+
+

@@ -10,13 +10,25 @@ export class ServersListComponent implements OnInit {
 
   responseServers: any;
 
+  idServer: any;
+
   constructor(private serversService: ServersService) { }
 
   ngOnInit(): void {
     this.serversService
       .getServerList()
-      .subscribe(res => {this.responseServers = res;  console.log(this.responseServers);
+      .subscribe((res: any) => {this.responseServers = res;
+        this.idServer = res;
+
+        console.log("Aqui",this.idServer);
+        console.log(this.responseServers);
+        
+        
       })
+  }
+
+  serverId(){
+    
   }
 
 }

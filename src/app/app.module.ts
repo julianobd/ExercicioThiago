@@ -22,6 +22,7 @@ import { UsersDelComponent } from './pages/users/users-del/users-del.component';
 import { UsersEditComponent } from './pages/users/users-edit/users-edit.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     UsersDelComponent,
     UsersEditComponent,
     HeaderComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MachinesService } from 'src/app/core/services/machines.service';
 
 @Component({
   selector: 'app-machines-get',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MachinesGetComponent implements OnInit {
 
-  constructor() { }
+  responseMachines: any;
+
+  constructor(private machinesService: MachinesService) { }
 
   ngOnInit(): void {
+    this.machinesService
+      .getMachines()
+      .subscribe(res => {this.responseMachines = res
+        console.log("Aqui2",this.responseMachines);
+        
+      })
   }
 
 }

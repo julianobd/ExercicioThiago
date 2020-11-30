@@ -1,1 +1,40 @@
-<p>jobs-list works!</p>
+<div class="container">
+    
+    <div class="card">
+        <div class="card-body">
+          <strong> TRABALHOS </strong>
+        </div>
+    </div>
+
+    <div class="add">
+      <button type="button" class="btn btn-success" 
+              style="width: 100px;" routerLink="/addJobs">+ Trabalho</button>
+    </div>
+
+    <table class="table table-hover" *ngIf="responseJobs">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Level</th>
+            <th scope="col">Exp</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let jobs of responseJobs">
+            <td>{{jobs.id}}</td>
+            <td>{{jobs.level}}</td>
+            <td>{{jobs.exp}}</td>
+            <td>{{jobs.title}}</td>
+            <td>
+                <button type="button" class="btn btn-primary edit" routerLink="/editJobs">
+                  Editar
+                </button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+</div>

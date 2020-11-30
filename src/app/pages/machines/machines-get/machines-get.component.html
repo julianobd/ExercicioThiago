@@ -1,1 +1,41 @@
-<p>machines-get works!</p>
+<div class="container">
+    
+    <div class="card">
+        <div class="card-body">
+          <strong> MAQUINA DE EXPERIÊNCIA </strong>
+        </div>
+    </div>
+
+    <br>
+
+    <table class="table table-hover" *ngIf="responseMachines">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Exp</th>
+            <th scope="col">Hora Inicio</th>
+            <th scope="col">Hora Fim</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let machines of responseMachines">
+            <td>{{machines.id}}</td>
+            <td>{{machines.description}}</td>
+            <td>{{machines.expEachMinute}}</td>
+            <td>{{machines.hourStart}}</td>
+            <td>{{machines.hourEnds}}</td>
+            <td>
+                <button type="button" class="btn btn-primary edit" routerLink="/editMachines">
+                  Editar
+                </button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+</div>
+
+

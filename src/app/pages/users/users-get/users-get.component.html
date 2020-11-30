@@ -1,1 +1,42 @@
-<p>users-get works!</p>
+<div class="container">
+    
+    <div class="card">
+        <div class="card-body">
+          <strong> USUÁRIOS </strong>
+        </div>
+    </div>
+
+    <div class="add">
+      <button type="button" class="btn btn-success" 
+              style="width: 100px;" routerLink="/addUser">+ Usuário</button>
+    </div>
+
+    <table class="table table-hover" *ngIf="responseUser">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Dinheiro Inicial</th>
+            <th scope="col">Pontos</th>
+            <th scope="col">Permissão</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let users of responseUser">
+            <td>{{users.id}}</td>
+            <td>{{users.name}}</td>
+            <td>{{users.initialMoney}}</td>
+            <td>{{users.statusPoint}}</td>
+            <td>{{users.permission}}</td>
+            <td>
+                <button type="button" class="btn btn-primary edit" routerLink="/editUser">
+                  Editar
+                </button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+</div>

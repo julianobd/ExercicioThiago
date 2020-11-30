@@ -9,7 +9,8 @@
     </div>
 
     <div class="add">
-      <button type="button" class="btn btn-success" style="width: 100px;">+ Item</button>
+      <button type="button" class="btn btn-success" 
+              style="width: 100px;" routerLink="/addItem">+ Item</button>
     </div>
 
     <table class="table table-hover" *ngIf="responseItem">
@@ -41,8 +42,7 @@
             <td>{{item.statusPoint}}</td>
             <td>{{item.quantityInitial}}</td>
             <td class="action">
-                <button type="button" class="btn btn-outline-warning">Editar</button>
-                <button type="button" class="btn btn-outline-danger">Deletar</button>
+                <button type="button" class="btn btn-outline-danger" routerLink="/delItem">Deletar</button>
             </td>
           </tr>
 
