@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { requestUser } from 'src/app/core/model/users';
+import { UsersService } from 'src/app/core/services/users.service';
+import { GlobalConstants } from 'src/environments/environment';
 
 @Component({
   selector: 'app-users-add',
@@ -7,9 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersAddComponent implements OnInit {
 
-  constructor() { }
+  request: requestUser = {
+    name: '',
+    email: '',
+    password: '',
+    permission: 0,
+    serverId: '',
+  }
 
-  ngOnInit(): void {
+  responseUser: any;
+
+  server: any;
+
+  constructor(private userService: UsersService) { }
+
+  ngOnInit(): void {  
+  }
+
+  addUser(){
+    this.userService
+      .addUser(this.request)
+      .subscribe( user => {this.responseUser = user;
+        this.server = GlobalConstants.serverId
+        alert("Usuario adicionado com sucesso!")
+      })
   }
 
 }

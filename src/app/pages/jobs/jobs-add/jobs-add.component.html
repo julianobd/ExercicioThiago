@@ -9,82 +9,74 @@
             <form>
 
                 <div class="form-row">
-                  <div class="col">
-                      <h5>ID:</h5>
-                    <input type="text" class="form-control" placeholder="id">
-                  </div>
-                  <div class="col">
+
+                  <div class="col-md-12 mb-2">
                       <h5>Nome:</h5>
-                    <input type="text" class="form-control" placeholder="Inserir nome">
+                    <input type="text" class="form-control" name="name" [(ngModel)]="request.name">
                   </div>
                 </div>
 
                 <div class="form-row">
-                    <div class="col">
-                        <h5>Imagem</h5>
-                      <input type="text" class="form-control" placeholder="3fa85f64-5717-4562-b3fc-2c963f66afa6">
-                    </div>
-                    <div class="col">
-                        <h5>Sáude:</h5>
-                      <input type="number" class="form-control" placeholder="0">
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="col">
-                        <h5>Armadura:</h5>
-                      <input type="number" class="form-control" placeholder="0">
-                    </div>
-                    <div class="col">
-                        <h5>Experiência:</h5>
-                      <input type="number" class="form-control" placeholder="0">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="col">
-                        <h5>Fome:</h5>
-                      <input type="number" class="form-control" placeholder="0">
-                    </div>
-                    <div class="col">
-                        <h5>Dinheiro:</h5>
-                      <input type="number" class="form-control" placeholder="0">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="col">
-                        <h5>Ponto Status:</h5>
-                      <input type="number" class="form-control" placeholder="0">
+                    <div class="col-md-6 mb-2">
+                        <h5>Cor</h5>
+                      <input type="text" class="form-control" name="color" [(ngModel)]="request.color" >
                     </div>
 
-                    <div class="col">
-                        <h5>Is Inicial:</h5>
-                      <select class="form-control" id="selectIsInicial">
+                    <div class="col-md-6 mb-2">
+                        <h5>Pode Curar:</h5>
+                      <select type="text" class="form-control" name="canHeal" [(ngModel)]="request.canHeal">
                         <option value="true">Sim</option>
                         <option value="false">Não</option>
-                        </select>
-                    </div>                  
+                      </select>  
+                    </div>
                 </div>
 
                 <div class="form-row">
-                    <div class="col">
-                        <h5>Quantidade Inicial:</h5>
-                      <input type="number" class="form-control" placeholder="0">
-                    </div>
+                  <div class="col-md-6 mb-2">
+                    <h5>Pode Prender:</h5>
+                  <select type="text" class="form-control" name="canArrest"  [(ngModel)]="request.canArrest">
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                  </select>  
+                </div>
+                <div class="col-md-6 mb-2">
+                  <h5>Pode Casar:</h5>
+                <select type="text" class="form-control" name="canDoMarriage" [(ngModel)]="request.canDoMarriage">
+                  <option value="true">Sim</option>
+                  <option value="false">Não</option>
+                </select>  
+              </div>
+                </div>
 
-                    <div class="col">
-                        <h5>Is Virtual:</h5>
-                      <select class="form-control" id="selectIsInicial">
-                        <option value="true">Sim</option>
-                        <option value="false">Não</option>
+                <div class="form-row">
+                  <div class="col-md-6 mb-2">
+                    <h5>Padrão:</h5>
+                    <select type="text" class="form-control" name="default" [(ngModel)]="request.isDefault">
+                      <option value="true">Sim</option>
+                      <option value="false">Não</option>
+                    </select>  
+                  </div>
+
+                    <div class="col-md-6 mb-2">
+                        <h5>Requerimento Xp:</h5>
+                      <input type="number" class="form-control" name="requirimentXp" [(ngModel)]="request.requirementXp">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-4 mb-2">
+                        <h5>Trablaho Publico:</h5>
+                        <select class="form-control" id="selectIsInicial" name="publicJob" [(ngModel)]="request.publicJob">
+                          <option value="true">Sim</option>
+                          <option value="false">Não</option>
                         </select>
                     </div>                  
                 </div>
 
             </form>
 
-            <a class="btn"><h4> + Adicionar</h4></a>
+            <a class="btn" (click)="addJobs()"><h4> + Adicionar</h4></a>
         </div>
       </div>
 </div>

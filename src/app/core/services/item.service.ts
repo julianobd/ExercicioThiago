@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
+import { environment, GlobalConstants } from 'src/environments/environment';
+import { Item, RequestItem } from '../model/item';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +20,15 @@ export class ItemService {
    getItemList(){
      return this.http.get(environment.baseURL + 'Item/ListServerWithItems/' + `${this.userToken}` + '/' + `${this.serverId}`);
    }
+
+   createItem(request: RequestItem): Observable<Item>{
+    
+    request.isInitial = JSON.parse(request.isInitial);
+    request.isVirtual = JSON.parse(request.isVirtual);
+
+    return this.http.post<Item>(environment.baseURL + environment.postItem + `${GlobalConstants.token}` + '/' + `${GlobalConstants.serverId}`, request)
+
+  }
+
 
 }

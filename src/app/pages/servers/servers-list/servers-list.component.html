@@ -20,7 +20,7 @@
             <th scope="col">ID</th>
             <th scope="col">Dinheiro</th>
             <th scope="col">Pontos Iniciais</th>
-            <th scope="col">Editar</th>
+            <th scope="col">Servidor</th>
             <th scope="col">Deletar</th>
 
           </tr>
@@ -32,12 +32,15 @@
             <td>{{server.initialMoney}}</td>
             <td>{{server.initialStatsPoints}}</td>
             <td class="action">
-                <button type="button" class="btn btn-outline-warning" (click)="serverId()">Servidor</button>
-                <button type="button" class="btn btn-outline-success">Itens</button>
-                <button type="button" class="btn btn-outline-primary">Tabela</button>
+                <button type="button" class="btn btn btn-secondary" 
+                        (click)="selectServer(server.id, server.name)">
+                        Selecionar Servidor
+                </button>
             </td>
-            <td>
-                <button type="button" class="btn btn-outline-danger">Deletar</button>
+            <td class="action">
+                <button type="button" class="btn btn btn-danger">
+                  Deletar
+                </button>
             </td>
           </tr>
 

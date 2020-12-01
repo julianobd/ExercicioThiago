@@ -11,56 +11,56 @@
                 <div class="form-row">
                   <div class="col">
                       <h5>ID:</h5>
-                    <input type="text" class="form-control" placeholder="id">
+                    <input type="text" class="form-control" placeholder="" name="id" [(ngModel)]="server" >
                   </div>
                   <div class="col">
                       <h5>Nome:</h5>
-                    <input type="text" class="form-control" placeholder="Inserir nome">
+                    <input type="text" class="form-control" placeholder="Inserir nome" name="nameItem" [(ngModel)]="request.name">
                   </div>
                 </div>
 
                 <div class="form-row">
                     <div class="col">
                         <h5>Imagem</h5>
-                      <input type="text" class="form-control" placeholder="3fa85f64-5717-4562-b3fc-2c963f66afa6">
+                      <input type="text" class="form-control" placeholder="" name="image" [(ngModel)]="server" >
                     </div>
                     <div class="col">
                         <h5>Sáude:</h5>
-                      <input type="number" class="form-control" placeholder="0">
+                      <input type="number" class="form-control" placeholder="0" name="health"[(ngModel)]="request.health">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="col">
                         <h5>Armadura:</h5>
-                      <input type="number" class="form-control" placeholder="0">
+                      <input type="number" class="form-control" placeholder="0" name="armor" [(ngModel)]="request.vest">
                     </div>
                     <div class="col">
                         <h5>Experiência:</h5>
-                      <input type="number" class="form-control" placeholder="0">
+                      <input type="number" class="form-control" placeholder="0" name="experience" [(ngModel)]="request.experience">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="col">
                         <h5>Fome:</h5>
-                      <input type="number" class="form-control" placeholder="0">
+                      <input type="number" class="form-control" placeholder="0" name="hugry"[(ngModel)]="request.hungry">
                     </div>
                     <div class="col">
                         <h5>Dinheiro:</h5>
-                      <input type="number" class="form-control" placeholder="0">
+                      <input type="number" class="form-control" placeholder="0" name="money"[(ngModel)]="request.money">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="col">
                         <h5>Ponto Status:</h5>
-                      <input type="number" class="form-control" placeholder="0">
+                      <input type="number" class="form-control" placeholder="0" name="statusPoint"[(ngModel)]="request.statusPoint">
                     </div>
 
                     <div class="col">
                         <h5>Is Inicial:</h5>
-                      <select class="form-control" id="selectIsInicial">
+                      <select class="form-control" id="selectIsInicial" name="isInicial" [(ngModel)]="request.isInitial">
                         <option value="true">Sim</option>
                         <option value="false">Não</option>
                         </select>
@@ -70,12 +70,12 @@
                 <div class="form-row">
                     <div class="col">
                         <h5>Quantidade Inicial:</h5>
-                      <input type="number" class="form-control" placeholder="0">
+                      <input type="number" class="form-control" placeholder="0" name="quantityInitial"[(ngModel)]="request.quantityInitial">
                     </div>
 
                     <div class="col">
                         <h5>Is Virtual:</h5>
-                      <select class="form-control" id="selectIsInicial">
+                      <select class="form-control" id="selectIsInicial" name="isVirtual"[(ngModel)]="request.isVirtual">
                         <option value="true">Sim</option>
                         <option value="false">Não</option>
                         </select>
@@ -84,7 +84,7 @@
 
             </form>
 
-            <a class="btn"><h4> + Adicionar</h4></a>
+            <a class="btn" (click)="addItem()"><h4> + Adicionar</h4></a>
         </div>
       </div>
 </div>

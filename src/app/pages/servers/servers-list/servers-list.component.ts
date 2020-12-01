@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServersService } from 'src/app/core/services/servers.service';
+import { GlobalConstants } from 'src/environments/environment';
 
 @Component({
   selector: 'app-servers-list',
@@ -27,8 +28,9 @@ export class ServersListComponent implements OnInit {
       })
   }
 
-  serverId(){
-    
+  selectServer(id: any, name: any) {
+    GlobalConstants.selectedServer = id;
+    GlobalConstants.selectedServerName = name;
   }
 
 }

@@ -2,6 +2,10 @@ export const environment = {
   production: false,
   baseURL: 'http://hcs.dev4.com.br/api/',
 
+  //login
+
+  login: '/api/Login/Login',
+
   //Avatar
   getAvatar: 'Avatar/ListAvatars/',
   putAvatar: 'Avatar/EditAvatar/',
@@ -18,7 +22,7 @@ export const environment = {
 
   //Jobs
   getJobs: 'Jobs/GetJobs/',
-  postJobs: '​Jobs​/AddJob​/',
+  postJobs: '​Jobs/AddJob/',
   putJobs: '​Jobs​/EditJob​/',
   delJobs: 'Jobs​/DeleteJob​/',
 
@@ -49,8 +53,6 @@ export class GlobalConstants {
   public static selectedServerName: string = "";
 
 }
-
-
 
 /*
  * For easier debugging in development mode, you can import the following file

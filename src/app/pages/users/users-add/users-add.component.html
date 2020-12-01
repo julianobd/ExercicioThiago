@@ -11,22 +11,25 @@
                 <div class="form-row">
                   <div class="col">
                     <h5>Nome:</h5>
-                    <input type="text" class="form-control" placeholder="Inserir nome">
+                    <input type="text" class="form-control" placeholder="Inserir nome"
+                            name="name" [(ngModel)]="request.name">
                   </div>
                   <div class="col">
-                    <h5>Emai:</h5>
-                    <input type="text" class="form-control" placeholder="Inserir Email">
+                    <h5>Email:</h5>
+                    <input type="text" class="form-control" placeholder="Inserir Email"
+                            name="email" [(ngModel)]="request.email">
                   </div>
                 </div>
 
                 <div class="form-row">
                     <div class="col">
                         <h5>Senha</h5>
-                      <input type="password" class="form-control" placeholder="password">
+                      <input type="password" class="form-control" placeholder="password"
+                              name="password" [(ngModel)]="request.password">
                     </div>
                     <div class="col">
                       <h5>Permissão:</h5>
-                    <select class="form-control" id="selectIsInicial">
+                    <select class="form-control" id="selectIsInicial" name="permission" [(ngModel)]="request.permission">
                       <option value="2">Administrador</option>
                       <option value="1">Restrito</option>
                       </select>
@@ -36,13 +39,13 @@
                 <div class="form-row">
                     <div class="col">
                         <h5>Servidor:</h5>
-                      <input type="text" class="form-control" placeholder="0">
+                      <input type="text" class="form-control" placeholder="0" name="server" [(ngModel)]="server">
                     </div>
                 </div>
 
             </form>
 
-            <a class="btn"><h4> + Adicionar</h4></a>
+            <a class="btn" (click)="addUser()"><h4> + Adicionar</h4></a>
         </div>
       </div>
 </div>

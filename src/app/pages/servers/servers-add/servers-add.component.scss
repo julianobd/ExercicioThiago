@@ -22,9 +22,10 @@ opacity: 0.6;
 .form-row {
     padding-top: 7px;
 }
+
 .card-header {
-    background-color: #FFD700;
-    color: #000000;
+    background-color: #009AFF;
+    color: #FFFFFF;
     padding: 10px;
     h3 {
         margin-left: 1rem;
@@ -43,14 +44,15 @@ opacity: 0.6;
     margin: auto;
     justify-content: center;
     margin-top: 20px;
-    background-color: lime;
+    padding: 5px;
+    color: #FFFFFF;
     h4 {
-        padding: 5px;
+        color: #000000;
+        padding: 10px;
     }
 }
 
-.title {
-    
+.title {   
     margin-top: 20px;
     margin-left: 5px;
     margin-bottom: 15px;
