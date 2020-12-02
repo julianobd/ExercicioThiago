@@ -1,84 +1,94 @@
 <div class="container">
-    
-    <div class="card">
-        <div class="card-header">
-          <h3><strong> Adicionar Servidor </strong></h3>
-        </div>
-        <div class="card-body">
-            
-            <form>
 
-                <div class="form-row">
-                  <div class="col">
-                      <h5>Nome:</h5>
-                    <input type="text" class="form-control" placeholder="Inserir nome">
-                  </div>
-                  <div class="col">
-                    <h5>Compartilhado:</h5>
-                  <select class="form-control" id="selectIsInicial">
-                    <option value="true">Sim</option>
-                    <option value="false">Não</option>
-                    </select>
-                  </div>
-                </div>
+  <br>
 
-                <div class="form-row">
-                  <div class="col">
-                    <h5>Doença:</h5>
-                    <select class="form-control" id="selectIsInicial">
-                        <option value="true">Sim</option>
-                        <option value="false">Não</option>
-                      </select>
-                    </div>
-                    <div class="col">
-                        <h5>Dinheiro Inicial:</h5>
-                      <input type="number" class="form-control" placeholder="0">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="col">
-                    <h5>Ponto Status Inicial:</h5>
-                    <input type="number" class="form-control" placeholder="0">
-                  </div>
-                </div>
-
-                <h4 class="title">Pacotes</h4>
-
-                <div class="form-row">
-                    <div class="col">
-                        <h5>ID:</h5>
-                      <input type="text" class="form-control" placeholder="0">
-                    </div>
-                    <div class="col">
-                        <h5>Pacote nome:</h5>
-                      <input type="text" class="form-control" placeholder="Nome">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="col">
-                    <h5>Descrição:</h5>
-                  <input type="text" class="form-control" placeholder="descrição">
-                </div>
-                </div>
-
-                <div class="form-row">
-                    
-
-                    <div class="col">
-                        <h5>Is Virtual:</h5>
-                      <select class="form-control" id="selectIsInicial">
-                        <option value="true">Sim</option>
-                        <option value="false">Não</option>
-                        </select>
-                    </div>                  
-                </div>
-
-            </form>
-
-            <a class="btn btn btn-success"> + Adicionar </a>
-        </div>
+  <div class="card title">
+      <div class="card-body">
+        <strong> ADICIONAR SERVIDOR </strong>
       </div>
+  </div>
+
+  <div class="card editCard">
+
+  <div class="d-flex justify-content-between" >
+
+    <form style="width: 100rem; height: 24rem;">
+
+      <div class="form-row">
+
+        <div class="col-md-6 mb-2">
+            <label for="validationDefault01">Nome</label>
+            <input type="text" class="form-control" 
+                id="validationDefault01" placeholder="inserir nome" 
+                required  name="nome">
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <label for="validationDefault01">Compartilhado</label>
+          <select type="text" class="form-control" id="validationDefault01" required  name="saude">
+          <option value="">Selecionar</option>
+          <option value="true">Sim</option>
+          <option value="true">Não</option>
+          </select>  
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <label for="validationDefault01">Doença</label>
+          <select type="text" class="form-control" id="validationDefault01" required  name="saude">
+            <option value="">Selecionar</option>
+            <option value="true">Sim</option>
+            <option value="true">Não</option>
+          </select>  
+        </div>
+
+      </div>
+
+      <br>
+      
+      <div class="form-row">
+
+        <div class="col-md-3 mb-2">
+          <label for="validationDefault01">Dinheiro Inicial</label>
+          <input type="number" class="form-control" 
+          id="validationDefault01" placeholder="0" 
+          required  name="initialMoney">
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault01">Pontos Iniciais</label>
+          <input type="number" class="form-control" 
+            id="validationDefault01" placeholder="0" 
+            required  name="initialStatsPoints">
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault01">Nome do pacote</label>
+          <input type="text" class="form-control" 
+            id="validationDefault01" placeholder="Inserir nome de Pcote" 
+            required  name="parcelName">
+        </div>
+
+        <div class="col-md-3 mb-2">
+          <label for="validationDefault01">Descrição</label>
+          <input type="text" class="form-control" 
+            id="validationDefault01" placeholder="Inserir descrição" 
+            required  name="parcelDescription">
+        </div>
+
+      </div>
+
+        <button type="button" class="btn btn-outline-success">+ Adicionar</button>
+        
+      </form>
+      
+      </div>
+
+    </div>
+
 </div>
+
+
+
+
+
 

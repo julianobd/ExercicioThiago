@@ -16,34 +16,34 @@
     <table class="table table-hover" *ngIf="responseServers">
         <thead>
           <tr>
-            <th scope="col">Nome</th>
-            <th scope="col">ID</th>
-            <th scope="col">Dinheiro</th>
-            <th scope="col">Pontos Iniciais</th>
-            <th scope="col">Servidor</th>
-            <th scope="col">Deletar</th>
-
+            <th>Nome</th>
+            <th>Compartilhado</th>
+            <th>Doenças</th>
+            <th>Dinheiro</th>
+            <th>Atributos</th>
+            <th>Selecionar Servidor</th>
+            <th>Deletar Servidor</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let server of responseServers">
             <td>{{server.name}}</td>
-            <td>{{server.id}}</td>
+            <td>{{server.shared ? 'Sim' : 'Não'}}</td>
+            <td>{{server.hasDisease ? 'Sim' : 'Não'}}</td>
             <td>{{server.initialMoney}}</td>
             <td>{{server.initialStatsPoints}}</td>
             <td class="action">
-                <button type="button" class="btn btn btn-secondary" 
-                        (click)="selectServer(server.id, server.name)">
-                        Selecionar Servidor
-                </button>
+              <button type="button" class="btn btn btn-secondary" 
+                      (click)="selectServer(server.id, server.name)">
+                      Selecionar
+              </button>
             </td>
-            <td class="action">
-                <button type="button" class="btn btn btn-danger">
-                  Deletar
-                </button>
+            <td class="action">    
+              <button type="button" class="btn btn btn-danger">
+                Deletar
+              </button>
             </td>
           </tr>
-
         </tbody>
       </table>
 

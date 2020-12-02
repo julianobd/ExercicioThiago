@@ -17,7 +17,7 @@ export class AvatarListService {
     ) { }
 
    getAvatar(){
-     return this.http.get(environment.baseURL + environment.getAvatar + `${this.userToken}` + '/' + `${this.serverId}`);
+     return this.http.get(environment.baseURL + environment.getAvatar + `${window.localStorage.getItem('token')}` + '/' + `${this.serverId}`);
    }
 
 

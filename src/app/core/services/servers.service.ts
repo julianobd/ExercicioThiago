@@ -19,13 +19,14 @@ export class ServersService {
     ) { }
 
    getServerList(){
-     return this.http.get(environment.baseURL + environment.getServersList + `$` );
+     return this.http.get(environment.baseURL + environment.getServersList + `${window.localStorage.getItem('token')}` );
    }
 
-  getAuthorizationToken(){
-    const token = window.localStorage.getItem('token');
-    return token
-  }
+
+  // getAuthorizationToken(){
+  //   const token = window.localStorage.getItem('token');
+  //   return token
+  // }
 
   
 

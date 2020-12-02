@@ -12,7 +12,7 @@ export class AccountService {
   async login(user: any) {
     const result = await this.http.post<any>('http://hcs.dev4.com.br/api/Login/Login', user).toPromise();
     if (result && result.token) {
-      window.localStorage.setItem('token', result.access_token);
+      window.localStorage.setItem('token', result.token);
       return true;
     }
 
