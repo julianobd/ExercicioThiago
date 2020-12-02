@@ -1,52 +1,75 @@
 <div class="container">
-    
-    <div class="card">
-        <div class="card-header">
-          <h3> Adicionar Usuário </h3>
-        </div>
-        <div class="card-body">
-            
-            <form>
 
-                <div class="form-row">
-                  <div class="col">
-                    <h5>Nome:</h5>
-                    <input type="text" class="form-control" placeholder="Inserir nome"
-                            name="name" [(ngModel)]="request.name">
-                  </div>
-                  <div class="col">
-                    <h5>Email:</h5>
-                    <input type="text" class="form-control" placeholder="Inserir Email"
-                            name="email" [(ngModel)]="request.email">
-                  </div>
-                </div>
+  <br>
 
-                <div class="form-row">
-                    <div class="col">
-                        <h5>Senha</h5>
-                      <input type="password" class="form-control" placeholder="password"
-                              name="password" [(ngModel)]="request.password">
-                    </div>
-                    <div class="col">
-                      <h5>Permissão:</h5>
-                    <select class="form-control" id="selectIsInicial" name="permission" [(ngModel)]="request.permission">
-                      <option value="2">Administrador</option>
-                      <option value="1">Restrito</option>
-                      </select>
-                  </div>                  
-                </div>
-
-                <div class="form-row">
-                    <div class="col">
-                        <h5>Servidor:</h5>
-                      <input type="text" class="form-control" placeholder="0" name="server" [(ngModel)]="server">
-                    </div>
-                </div>
-
-            </form>
-
-            <a class="btn" (click)="addUser()"><h4> + Adicionar</h4></a>
-        </div>
+  <div class="card title">
+      <div class="card-body">
+        <strong> ADICIONAR USUARIO </strong>
       </div>
+  </div>
+
+  <div class="card editCard">
+
+  <div class="d-flex justify-content-between" >
+
+    <form style="width: 100rem; height: 24rem;">
+
+      <div class="form-row">
+
+        <div class="col-md-6 mb-2">
+            <label for="validationDefault01">Nome</label>
+            <input type="text" class="form-control" 
+                id="validationDefault01" placeholder="inserir nome" 
+                required  name="nome">
+        </div>
+
+        <div class="col-md-6 mb-2">
+          <label for="validationDefault01">E-mail</label>
+          <input type="text" class="form-control" 
+              id="validationDefault01" placeholder="inserir email" 
+              required  name="email">
+        </div>
+
+      </div>
+      
+      <div class="form-row">
+
+
+        <div class="col-md-6 mb-2">
+          <label for="validationDefault01">Senha</label>
+          <input type="password" class="form-control" 
+              id="validationDefault01" placeholder="Inserir senha" 
+              required  name="password">
+        </div>
+
+        <div class="col-md-6 mb-2">
+          <label for="validationDefault01">Permissão</label>
+            <select type="text" class="form-control"
+                  id="validationDefault01" placeholder="inserir email" 
+                  required  name="permission">
+            <option value="">selecionar</option>
+            <option value="2">Administrador</option>
+            <option value="1">Restrito</option>
+          </select>
+
+        </div>
+   
+      </div>
+
+        <br>
+
+        <button type="button" class="btn btn-outline-success" (click)="addUser()">+ Adicionar</button>
+        
+      </form>
+      
+      </div>
+
+    </div>
+
 </div>
+
+
+
+
+
 

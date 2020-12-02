@@ -12,14 +12,13 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   getUser(){
-    return this.http.get(environment.baseURL + environment.getUser + `${GlobalConstants.token}`);
+    return this.http.get(environment.baseURL + environment.getUser + `${window.localStorage.getItem('token')}`);
   }
 
   addUser(request: requestUser): Observable<User>{
 
-  return this.http.post<User>('http://hcs.dev4.com.br/api/Users/AddUser/b025d2a9-d4c2-4f43-ae44-7d7fdec96f52-b92bd7ce-ec93-4b10-a916-8beda4181f3f', request)
+  return this.http.post<User>(environment.baseURL + 'Users/AddUser/' + `${window.localStorage.getItem('token')}`, request)
 
-    //return this.http.post<User>(environment.baseURL + environment.postUser + `${GlobalConstants.token}`, request)
   }
 
 

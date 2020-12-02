@@ -11,5 +11,4 @@ export interface requestUser {
     email: string;
     password: string;
     permission: number;
-    serverId: string;
 }

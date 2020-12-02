@@ -15,7 +15,6 @@ export class UsersAddComponent implements OnInit {
     email: '',
     password: '',
     permission: 0,
-    serverId: '',
   }
 
   responseUser: any;
